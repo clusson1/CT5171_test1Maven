@@ -14,11 +14,11 @@ pipeline {
                 sh 'mvn compiler:compile'
             }
         }
-//         stage ('Exec') {
-//             steps {
-//                 sh 'mvn exec:java'
-//             }
-//         }
+        stage ('Exec') {
+            steps {
+                sh 'mvn exec:java'
+            }
+        }
         stage ('Package') {
             steps {
                 sh 'mvn package'
