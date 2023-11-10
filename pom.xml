@@ -16,6 +16,7 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>${project.artifactId}</finalName>
          <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -28,15 +29,18 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                  <archive>
+            </plugin>
+        <plugin>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+                <archive>
                     <manifest>
                         <addClasspath>true</addClasspath>
                         <mainClass>org.example.Main</mainClass>
                     </manifest>
-                  </archive>
-                </configuration>
-            </plugin>
+                </archive>
+            </configuration>
+        </plugin>
          </plugins>
     </build>
 
